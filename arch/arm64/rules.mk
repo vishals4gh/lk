@@ -91,6 +91,7 @@ TOOLCHAIN_PREFIX := $(ARCH_$(ARCH)_TOOLCHAIN_PREFIX)
 $(info TOOLCHAIN_PREFIX = $(TOOLCHAIN_PREFIX))
 
 ARCH_COMPILEFLAGS += $(ARCH_$(ARCH)_COMPILEFLAGS)
+ARCH_COMPILEFLAGS += -fno-omit-frame-pointer -fno-optimize-sibling-calls
 
 ARCH_LDFLAGS += -z max-page-size=4096
 
